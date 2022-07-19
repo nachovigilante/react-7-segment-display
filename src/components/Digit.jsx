@@ -1,4 +1,4 @@
-import Segment from "./Segment";
+import Segment from "./Segment.jsx";
 import { useEffect, useState } from "react";
 
 const charToDigit = {
@@ -24,7 +24,7 @@ const charToDigit = {
 
 const letters = ["A", "B", "C", "D", "E", "F", "G"];
 
-const Digit = ({ char = "-", color = "red", height = 250 }) => {
+export const Digit = ({ char = "-", color = "red", height = 250 }) => {
     const style = {
         height: `${height}px`,
         width: `${height * 0.6}px`,
@@ -58,5 +58,3 @@ const Digit = ({ char = "-", color = "red", height = 250 }) => {
         </div>
     );
 };
-
-export default Digit;

@@ -1,7 +1,7 @@
-import Digit from "./Digit";
+import { Digit } from "./Digit.jsx";
 import { useEffect, useState } from "react";
 
-const Display = ({
+export const Display = ({
     count = 2,
     height = 250,
     value = null,
@@ -76,5 +76,3 @@ const Display = ({
         </div>
     );
 };
-
-export default Display;

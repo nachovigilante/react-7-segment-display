@@ -1,6 +1,6 @@
 {
     "name": "react-7-segment-display",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "description": "A react component that simulates a 7-segment display",
     "main": "dist/index.js",
     "module": "dist/index.es.js",

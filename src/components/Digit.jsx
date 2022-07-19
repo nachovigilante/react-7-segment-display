@@ -36,8 +36,6 @@ export const Digit = ({ char = "-", color = "red", height = 250 }) => {
     );
 
     useEffect(() => {
-        console.log(char);
-        console.log(charToDigit[char]);
         setActiveArray(char ? charToDigit[char] : [0, 0, 0, 0, 0, 0, 1]);
     }, [char]);
 

@@ -33,14 +33,14 @@ export const Display = ({
     };
 
     useEffect(() => {
-        let newDigits = value && value.split("");
+        let newDigits = value && value.toString().split("");
 
-        if (!value || count < value.length) {
+        if (!value || count < value.toString().length) {
             newDigits = null;
         }
 
-        if (value && count > value.length) {
-            for (let i = 0; i < count - value.length; i++) {
+        if (value && count > value.toString().length) {
+            for (let i = 0; i < count - value.toString().length; i++) {
                 newDigits.unshift("0");
             }
         }

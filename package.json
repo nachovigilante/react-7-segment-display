@@ -1,0 +1,40 @@
+{
+  "name": "react-7-segment-display",
+  "version": "1.0.0",
+  "description": "A react component that simulates a 7-segment display",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nachovigilante/react-7-segment-display.git"
+  },
+  "author": "Ignacio Vigilante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nachovigilante/react-7-segment-display/issues"
+  },
+  "homepage": "https://github.com/nachovigilante/react-7-segment-display#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack4": "^6.5.9",
+    "@storybook/manager-webpack4": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "0.0.13",
+    "babel-loader": "^8.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {}
+}

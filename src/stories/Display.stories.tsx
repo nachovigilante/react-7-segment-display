@@ -1,4 +1,5 @@
 import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Display } from "../components/Display";
 
@@ -18,9 +19,11 @@ export default {
             control: "color",
         },
     },
-};
+} as ComponentMeta<typeof Display>;
 
-const Template = (args) => <Display {...args} />;
+const Template: ComponentStory<typeof Display> = (args) => (
+    <Display {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {

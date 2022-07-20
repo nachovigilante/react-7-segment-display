@@ -1,4 +1,5 @@
 import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Digit } from "../components/Digit";
 
@@ -31,9 +32,9 @@ export default {
             ],
         },
     },
-};
+} as ComponentMeta<typeof Digit>;
 
-const Template = (args) => <Digit {...args} />;
+const Template: ComponentStory<typeof Digit> = (args) => <Digit {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

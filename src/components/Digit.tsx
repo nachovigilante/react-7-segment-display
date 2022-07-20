@@ -1,5 +1,5 @@
-import Segment from "./Segment.jsx";
-import { useEffect, useState } from "react";
+import Segment from "./Segment";
+import React, { useEffect, useState } from "react";
 
 const charToDigit = {
     "0": [1, 1, 1, 1, 1, 1, 0],
@@ -13,23 +13,33 @@ const charToDigit = {
     "8": [1, 1, 1, 1, 1, 1, 1],
     "9": [1, 1, 1, 1, 0, 1, 1],
     "@": [1, 1, 1, 1, 1, 0, 1],
-    "a": [1, 1, 1, 0, 1, 1, 1],
-    "b": [0, 0, 1, 1, 1, 1, 1],
-    "c": [1, 0, 0, 1, 1, 1, 0],
-    "d": [0, 1, 1, 1, 1, 0, 1],
-    "e": [1, 0, 0, 1, 1, 1, 1],
-    "f": [1, 0, 0, 0, 1, 1, 1],
+    a: [1, 1, 1, 0, 1, 1, 1],
+    b: [0, 0, 1, 1, 1, 1, 1],
+    c: [1, 0, 0, 1, 1, 1, 0],
+    d: [0, 1, 1, 1, 1, 0, 1],
+    e: [1, 0, 0, 1, 1, 1, 1],
+    f: [1, 0, 0, 0, 1, 1, 1],
     "-": [0, 0, 0, 0, 0, 0, 1],
+} as { [key: string]: number[] };
+
+const letters = ["A", "B", "C", "D", "E", "F", "G"] as const;
+
+type DigitType = {
+    char: string;
+    color: string;
+    height: number;
 };
 
-const letters = ["A", "B", "C", "D", "E", "F", "G"];
-
-export const Digit = ({ char = "-", color = "red", height = 250 }) => {
+export const Digit = ({
+    char = "-",
+    color = "red",
+    height = 250,
+}: DigitType) => {
     const style = {
         height: `${height}px`,
         width: `${height * 0.6}px`,
         zIndex: "1",
-    };
+    } as React.CSSProperties;
 
     const [activeArray, setActiveArray] = useState(
         char ? charToDigit[char] : [0, 0, 0, 0, 0, 0, 1]
@@ -46,7 +56,7 @@ export const Digit = ({ char = "-", color = "red", height = 250 }) => {
                 return (
                     <Segment
                         key={letter}
-                        active={active}
+                        active={active === 1}
                         size={height / 12.5}
                         color={color}
                         id={letter}

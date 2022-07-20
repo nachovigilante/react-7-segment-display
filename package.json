@@ -1,14 +1,17 @@
 {
     "name": "react-7-segment-display",
-    "version": "1.0.5",
+    "version": "1.1.0",
     "description": "A react component that simulates a 7-segment display",
-    "main": "dist/index.js",
-    "module": "dist/index.es.js",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "pretty": "prettier --write src",
+        "build": "npm run pretty && npm run build:esm && npm run build:cjs",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook",
-        "build-lib": "rollup -c rollup.config.js"
+        "build-storybook": "build-storybook"
     },
     "repository": {
         "type": "git",
@@ -17,7 +20,12 @@
     "keywords": [
         "react",
         "7-segment",
-        "display"
+        "display",
+        "7-segment-display",
+        "react-7-segment-display",
+        "digital",
+        "display",
+        "clock"
     ],
     "author": "Ignacio Vigilante",
     "license": "MIT",
@@ -28,7 +36,6 @@
     "devDependencies": {
         "@babel/core": "^7.18.9",
         "@babel/preset-react": "^7.18.6",
-        "@rollup/plugin-node-resolve": "^13.3.0",
         "@storybook/addon-actions": "^6.5.9",
         "@storybook/addon-essentials": "^6.5.9",
         "@storybook/addon-interactions": "^6.5.9",
@@ -37,17 +44,20 @@
         "@storybook/manager-webpack4": "^6.5.9",
         "@storybook/react": "^6.5.9",
         "@storybook/testing-library": "0.0.13",
+        "@types/node": "^18.0.6",
+        "@types/react": "^18.0.15",
+        "@types/react-dom": "^18.0.6",
+        "@typescript-eslint/eslint-plugin": "^5.30.7",
+        "@typescript-eslint/parser": "^5.30.7",
         "babel-loader": "^8.2.5",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "rollup": "^2.77.0",
-        "rollup-plugin-babel": "^4.4.0",
-        "rollup-plugin-peer-deps-external": "^2.2.4",
-        "rollup-plugin-terser": "^7.0.2"
+        "react-dom": "^18.2.0"
     },
     "peerDependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
-    "dependencies": {}
+    "dependencies": {
+        "typescript": "^4.7.4"
+    }
 }

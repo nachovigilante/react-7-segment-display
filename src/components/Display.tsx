@@ -1,13 +1,21 @@
-import { Digit } from "./Digit.jsx";
-import { useEffect, useState } from "react";
+import { Digit } from "./Digit";
+import React, { useEffect, useState } from "react";
+
+type DisplayType = {
+    count: number;
+    height: number;
+    value: any;
+    color: string;
+    backgroundColor?: string;
+};
 
 export const Display = ({
     count = 2,
     height = 250,
     value = null,
     color = "red",
-    backgroundColor = null,
-}) => {
+    backgroundColor,
+}: DisplayType) => {
     const [digits, setDigits] = useState([]);
 
     const style = {
@@ -18,7 +26,7 @@ export const Display = ({
         height: "fit-content",
         width: "fit-content",
         padding: "20px",
-    };
+    } as React.CSSProperties;
 
     const displayStyle = {
         display: "flex",
@@ -30,7 +38,7 @@ export const Display = ({
         backgroundColor: backgroundColor ? backgroundColor : "transparent",
         padding: "20px",
         color: "white",
-    };
+    } as React.CSSProperties;
 
     useEffect(() => {
         let newDigits = value && value.toString().split("");

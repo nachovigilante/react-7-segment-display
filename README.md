@@ -12,15 +12,13 @@ A React component that simulates a 7-segment display.
 
 ### Adding the component to your project
 
-    ```jsx
-    import { Display } from 'react-7-segment-display';
+```jsx
+import { Display } from "react-7-segment-display";
 
-    const App = () => (
-      <Display count="2" value="77" />
-    );
+const App = () => <Display count="2" value="77" />;
 
-    export default App;
-    ```
+export default App;
+```
 
 ## Props
 

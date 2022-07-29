@@ -15,20 +15,21 @@ A React component that simulates a 7-segment display.
 ```jsx
 import { Display } from "react-7-segment-display";
 
-const App = () => <Display count="2" value="77" />;
+const App = () => <Display value="77" />;
 
 export default App;
 ```
 
 ## Props
 
-| Name           | Decription                                   | Type      | Default value |
-| -------------- | -------------------------------------------- | --------- | ------------- |
-| value          | Value displayed on the display               | `any`     | `null`        |
-| color          | Color of the display segments when turned on | `string`  | `"red"`       |
-| height         | Total height of the display digits           | `number`  | `250`         |
-| count          | Amount of digits on the display              | `number`  | `2`           |
-| bakgroundColor | Color of the background                      | `string?` | n/a           |
+| Name           | Decription                                      | Type       | Default value |
+| -------------- | ----------------------------------------------- | ---------- | ------------- |
+| value          | Value displayed on the display (in hexadecimal) | `any`      | `null`        |
+| color          | Color of the display segments when turned on    | `string`   | `"red"`       |
+| height         | Total height of the display digits              | `number`   | `250`         |
+| count          | Amount of digits on the display                 | `number`   | `2`           |
+| bakgroundColor | Color of the background                         | `string?`  | n/a           |
+| skew           | Whether the digits are skewed or not            | `boolean?` | `false`       |
 
 ## License
 

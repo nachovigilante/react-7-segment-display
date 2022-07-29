@@ -20,6 +20,15 @@ export const Display = ({
 }: DisplayType) => {
     const [digits, setDigits] = useState([]);
 
+    const [actualValue, setActualValue] = useState(value) as [any, any];
+
+    useEffect(() => {
+        setTimeout(() => {
+            console.log(actualValue);
+            setActualValue((v: any) => parseInt(v) + 1);
+        }, 500);
+    }, [actualValue]);
+
     const style = {
         display: "flex",
         flexDirection: "row",
@@ -43,20 +52,20 @@ export const Display = ({
     } as React.CSSProperties;
 
     useEffect(() => {
-        let newDigits = value && value.toString().split("");
+        let newDigits = actualValue && actualValue.toString().split("");
 
-        if (!value || count < value.toString().length) {
+        if (!actualValue || count < actualValue.toString().length) {
             newDigits = null;
         }
 
-        if (value && count > value.toString().length) {
-            for (let i = 0; i < count - value.toString().length; i++) {
+        if (actualValue && count > actualValue.toString().length) {
+            for (let i = 0; i < count - actualValue.toString().length; i++) {
                 newDigits.unshift("0");
             }
         }
 
         setDigits(newDigits);
-    }, [count, value]);
+    }, [count, actualValue]);
 
     return (
         <div className="display" style={displayStyle}>

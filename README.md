@@ -31,16 +31,17 @@ export default App;
 | bakgroundColor | Color of the background                                    | `string?`  | n/a           |
 | skew           | Whether the digits are skewed or not                       | `boolean?` | `false`       |
 
-## Valid values for `value`
+### Valid values for `value`
 
 You can dislay a number in decimal or hexadecimal, giving its value by a number or a string.
 
-```jsx
-<Display value={123} />
-<Display value="7b" />
-```
-
 ![Display demo](./assets/Display_hex.gif)
+
+### Skew prop
+
+`skew` is a boolean that determines whether the digits are skewed or not. You can use it to make the display look more like a real 7-segment display.
+
+![Display demo](./assets/Display_skew.gif)
 
 ## License
 

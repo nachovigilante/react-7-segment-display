@@ -80,6 +80,7 @@ export const Display = ({
                                   char="-"
                                   height={height}
                                   color={color}
+                                  skew={skew}
                               />
                           );
                       })}

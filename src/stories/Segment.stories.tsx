@@ -21,5 +21,7 @@ export const Default = Template.bind({});
 Default.args = {
     active: true,
     color: "red",
+    id: "A",
     size: 40,
+    skew: false
 };

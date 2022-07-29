@@ -7,6 +7,7 @@ type DisplayType = {
     value: any;
     color: string;
     backgroundColor?: string;
+    skew: boolean;
 };
 
 export const Display = ({
@@ -15,6 +16,7 @@ export const Display = ({
     value = null,
     color = "red",
     backgroundColor,
+    skew = false,
 }: DisplayType) => {
     const [digits, setDigits] = useState([]);
 
@@ -67,6 +69,7 @@ export const Display = ({
                                   char={digit}
                                   height={height}
                                   color={color}
+                                  skew={skew}
                               />
                           );
                       })

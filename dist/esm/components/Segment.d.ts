@@ -3,6 +3,7 @@ declare type SegmentType = {
     color: string;
     size: number;
     id: string;
+    skew: boolean;
 };
-declare const Segment: ({ active, color, size, id }: SegmentType) => JSX.Element;
+declare const Segment: ({ active, color, size, id, skew }: SegmentType) => JSX.Element;
 export default Segment;

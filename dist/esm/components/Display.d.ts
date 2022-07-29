@@ -4,6 +4,7 @@ declare type DisplayType = {
     value: any;
     color: string;
     backgroundColor?: string;
+    skew: boolean;
 };
-export declare const Display: ({ count, height, value, color, backgroundColor, }: DisplayType) => JSX.Element;
+export declare const Display: ({ count, height, value, color, backgroundColor, skew, }: DisplayType) => JSX.Element;
 export {};

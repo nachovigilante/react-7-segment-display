@@ -41,5 +41,5 @@ Default.args = {
     color: "red",
     height: 250,
     char: "0",
-    skew: false
+    skew: false,
 };

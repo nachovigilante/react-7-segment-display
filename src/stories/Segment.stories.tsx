@@ -23,5 +23,5 @@ Default.args = {
     color: "red",
     id: "A",
     size: 40,
-    skew: false
+    skew: false,
 };

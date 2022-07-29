@@ -32,5 +32,5 @@ Default.args = {
     value: "0",
     count: 2,
     backgroundColor: "black",
-    skew: false
+    skew: false,
 };

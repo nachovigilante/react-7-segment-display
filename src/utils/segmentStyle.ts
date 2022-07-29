@@ -6,57 +6,52 @@ export type SegmentStyleType = {
     transform: string;
 };
 
-const normalChamfer = 90;
-const skewedChamfer = 85;
-const middlePoint = 50;
-const skewedMiddlePoint = 30;
-
 export const segmentStyle = {
     A: {
         id: "A",
-        clipPath: `polygon(${normalChamfer}% 0%, 100% ${middlePoint}%, ${normalChamfer}% 100%, ${100 - normalChamfer}% 100%, 0 ${middlePoint}%, ${100 - normalChamfer}% 0)`,
+        clipPath: `polygon(90% 0%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 10% 0)`,
         marginTop: 0,
         marginLeft: 0.9,
         transform: "none",
     },
     B: {
         id: "B",
-        clipPath: `polygon(${normalChamfer}% 0%, 100% ${middlePoint}%, ${normalChamfer}% 100%, ${100 - normalChamfer}% 100%, 0 ${middlePoint}%, ${100 - normalChamfer}% 0)`,
+        clipPath: `polygon(90% 0%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 10% 0)`,
         marginTop: 2.65,
         marginLeft: 3.55,
         transform: "rotate(90deg)",
     },
     C: {
         id: "C",
-        clipPath: `polygon(${normalChamfer}% 0%, 100% ${middlePoint}%, ${normalChamfer}% 100%, ${100 - normalChamfer}% 100%, 0 ${middlePoint}%, ${100 - normalChamfer}% 0)`,
+        clipPath: `polygon(90% 0%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 10% 0)`,
         marginTop: 7.95,
         marginLeft: 3.55,
         transform: "rotate(90deg)",
     },
     D: {
         id: "D",
-        clipPath: `polygon(${normalChamfer}% 0%, 100% ${middlePoint}%, ${normalChamfer}% 100%, ${100 - normalChamfer}% 100%, 0 ${middlePoint}%, ${100 - normalChamfer}% 0)`,
+        clipPath: `polygon(90% 0%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 10% 0)`,
         marginTop: 10.6,
         marginLeft: 0.9,
         transform: "none",
     },
     E: {
         id: "E",
-        clipPath: `polygon(${normalChamfer}% 0%, 100% ${middlePoint}%, ${normalChamfer}% 100%, ${100 - normalChamfer}% 100%, 0 ${middlePoint}%, ${100 - normalChamfer}% 0)`,
+        clipPath: `polygon(90% 0%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 10% 0)`,
         marginTop: 7.95,
         marginLeft: -1.75,
         transform: "rotate(90deg)",
     },
     F: {
         id: "F",
-        clipPath: `polygon(${normalChamfer}% 0%, 100% ${middlePoint}%, ${normalChamfer}% 100%, ${100 - normalChamfer}% 100%, 0 ${middlePoint}%, ${100 - normalChamfer}% 0)`,
+        clipPath: `polygon(90% 0%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 10% 0)`,
         marginTop: 2.65,
         marginLeft: -1.75,
         transform: "rotate(90deg)",
     },
     G: {
         id: "G",
-        clipPath: `polygon(${normalChamfer}% 0%, 100% ${middlePoint}%, ${normalChamfer}% 100%, ${100 - normalChamfer}% 100%, 0 ${middlePoint}%, ${100 - normalChamfer}% 0)`,
+        clipPath: `polygon(90% 0%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 10% 0)`,
         marginTop: 5.3,
         marginLeft: 0.9,
         transform: "none",

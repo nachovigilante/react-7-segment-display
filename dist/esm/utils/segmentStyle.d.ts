@@ -1,4 +1,4 @@
-export declare type SegmentStyleType = {
+export type SegmentStyleType = {
     id: string;
     clipPath: string;
     marginTop: number;

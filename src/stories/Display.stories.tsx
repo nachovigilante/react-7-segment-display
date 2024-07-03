@@ -1,9 +1,8 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { Display } from "../components/Display";
 
-export default {
+const meta = {
     title: "Example/Display",
     component: Display,
     argTypes: {
@@ -19,18 +18,18 @@ export default {
             control: "color",
         },
     },
-} as ComponentMeta<typeof Display>;
+} satisfies Meta<typeof Display>;
 
-const Template: ComponentStory<typeof Display> = (args) => (
-    <Display {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-    color: "red",
-    height: 250,
-    value: "0",
-    count: 2,
-    backgroundColor: "black",
-    skew: false,
+export const Default: Story = {
+    args: {
+        color: "red",
+        height: 250,
+        value: "0",
+        count: 2,
+        backgroundColor: "black",
+        skew: false,
+    },
 };

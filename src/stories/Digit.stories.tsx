@@ -1,9 +1,8 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { Digit } from "../components/Digit";
 
-export default {
+const meta = {
     title: "Example/Digit",
     component: Digit,
     argTypes: {
@@ -32,14 +31,16 @@ export default {
             ],
         },
     },
-} as ComponentMeta<typeof Digit>;
+} satisfies Meta<typeof Digit>;
 
-const Template: ComponentStory<typeof Digit> = (args) => <Digit {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-    color: "red",
-    height: 250,
-    char: "0",
-    skew: false,
+export const Default: Story = {
+    args: {
+        color: "red",
+        height: 250,
+        char: "0",
+        skew: false,
+    },
 };

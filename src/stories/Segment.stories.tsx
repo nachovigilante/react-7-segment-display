@@ -1,9 +1,8 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import Segment from "../components/Segment";
 
-export default {
+const meta = {
     title: "Example/Segment",
     component: Segment,
     argTypes: {
@@ -11,17 +10,17 @@ export default {
         color: { control: "color" },
         size: { control: "number" },
     },
-} as ComponentMeta<typeof Segment>;
+} satisfies Meta<typeof Segment>;
 
-const Template: ComponentStory<typeof Segment> = (args) => (
-    <Segment {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-    active: true,
-    color: "red",
-    id: "A",
-    size: 40,
-    skew: false,
+export const Default: Story = {
+    args: {
+        active: true,
+        color: "red",
+        id: "A",
+        size: 40,
+        skew: false,
+    },
 };

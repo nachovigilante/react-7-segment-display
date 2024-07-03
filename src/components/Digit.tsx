@@ -27,7 +27,7 @@ export const Digit = ({
     } as React.CSSProperties;
 
     const [activeArray, setActiveArray] = useState(
-        char ? charToDigit[char] : charToDigit["-"]
+        char ? charToDigit[char] : charToDigit["-"],
     );
 
     useEffect(() => {

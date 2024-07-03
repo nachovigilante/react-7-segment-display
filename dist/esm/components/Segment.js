@@ -3,7 +3,9 @@ import { segmentStyle, skewedSegmentStyle } from "../utils/segmentStyle";
 const Segment = ({ active, color, size, id, skew }) => {
     const ss = skew ? skewedSegmentStyle[id] : segmentStyle[id];
     const outerStyle = {
-        filter: active ? `drop-shadow(0px 0px ${size * 0.3}px ${color})` : "none",
+        filter: active
+            ? `drop-shadow(0px 0px ${size * 0.3}px ${color})`
+            : "none",
         padding: size * 0.3,
         width: "fit-content",
         position: ss.id ? "absolute" : "relative",
@@ -14,7 +16,9 @@ const Segment = ({ active, color, size, id, skew }) => {
     };
     const innerStyle = {
         backgroundColor: color,
-        filter: active ? "opacity(1) grayscale(0)" : "opacity(0.3) grayscale(0.7)",
+        filter: active
+            ? "opacity(1) grayscale(0)"
+            : "opacity(0.3) grayscale(0.7)",
         color: color,
         clipPath: ss.clipPath,
         WebkitClipPath: ss.clipPath,

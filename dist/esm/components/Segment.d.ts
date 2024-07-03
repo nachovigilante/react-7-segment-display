@@ -1,10 +1,9 @@
-import React from "react";
-type SegmentType = {
+declare type SegmentType = {
     active: boolean;
     color: string;
     size: number;
     id: string;
     skew: boolean;
 };
-declare const Segment: ({ active, color, size, id, skew }: SegmentType) => React.JSX.Element;
+declare const Segment: ({ active, color, size, id, skew }: SegmentType) => JSX.Element;
 export default Segment;

@@ -1,5 +1,6 @@
 import { Digit } from "./Digit";
 import React, { useEffect, useState } from "react";
+import charToDigit, { ICharToDigit } from "../utils/charToDigit";
 
 type DisplayType = {
     count: number;
@@ -8,6 +9,7 @@ type DisplayType = {
     color: string;
     backgroundColor?: string;
     skew: boolean;
+    charMap?: ICharToDigit;
 };
 
 export const Display = ({
@@ -17,6 +19,7 @@ export const Display = ({
     color = "red",
     backgroundColor,
     skew = false,
+    charMap = charToDigit,
 }: DisplayType) => {
     const [digits, setDigits] = useState([]);
 
@@ -70,6 +73,7 @@ export const Display = ({
                                   height={height}
                                   color={color}
                                   skew={skew}
+                                  charMap={charMap}
                               />
                           );
                       })

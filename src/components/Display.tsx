@@ -10,7 +10,10 @@ type DisplayType = {
     backgroundColor?: string;
     skew: boolean;
     charMap?: ICharToDigit;
+    shiftText?: string
 };
+
+const DEFAULT_SHIFT_CHAR = "0";
 
 export const Display = ({
     count = 2,
@@ -20,6 +23,7 @@ export const Display = ({
     backgroundColor,
     skew = false,
     charMap = charToDigit,
+    shiftText = DEFAULT_SHIFT_CHAR,
 }: DisplayType) => {
     const [digits, setDigits] = useState([]);
 
@@ -53,8 +57,9 @@ export const Display = ({
         }
 
         if (value && count > value.toString().length) {
+            const shiftTextReversed = shiftText?.split("").reverse();
             for (let i = 0; i < count - value.toString().length; i++) {
-                newDigits.unshift("0");
+                newDigits.unshift(shiftTextReversed[i % shiftText?.length]);
             }
         }
 

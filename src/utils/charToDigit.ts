@@ -1,5 +1,5 @@
 export interface ICharToDigit {
-    [key: string]: [number,number,number,number,number,number,number]
+    [key: string | number]: [number,number,number,number,number,number,number]
 }
 
 const   charToDigit: ICharToDigit = {

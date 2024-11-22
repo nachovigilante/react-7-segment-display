@@ -49,3 +49,19 @@ export const WithCharMap: Story = {
             ...CharToDigit}
     },
 };
+
+export const ShiftText: Story = {
+    args: {
+        color: "red",
+        height: 250,
+        value: "12",
+        shiftText: "a",
+        count: 4,
+        backgroundColor: "black",
+        skew: false,
+        charMap: {
+            "_": [0,0,0,1,0,0,0],
+            " ": [0,0,0,0,0,0,0],
+            ...CharToDigit}
+    },
+};

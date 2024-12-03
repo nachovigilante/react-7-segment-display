@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 
 import { Display } from "../components/Display";
+import CharToDigit from "../utils/charToDigit";
 
 const meta = {
     title: "Example/Display",
@@ -31,5 +32,20 @@ export const Default: Story = {
         count: 2,
         backgroundColor: "black",
         skew: false,
+    },
+};
+
+export const WithCharMap: Story = {
+    args: {
+        color: "red",
+        height: 250,
+        value: "_- _",
+        count: 4,
+        backgroundColor: "black",
+        skew: false,
+        charMap: {
+            "_": [0,0,0,1,0,0,0],
+            " ": [0,0,0,0,0,0,0],
+            ...CharToDigit}
     },
 };

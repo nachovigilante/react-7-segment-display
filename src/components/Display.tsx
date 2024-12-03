@@ -1,3 +1,4 @@
+import defaultCharMap, { CharToDigit } from "../utils/charToDigit";
 import { Digit } from "./Digit";
 import React, { useEffect, useState } from "react";
 
@@ -8,6 +9,7 @@ type DisplayType = {
     color: string;
     backgroundColor?: string;
     skew: boolean;
+    charMap?: CharToDigit;
 };
 
 export const Display = ({
@@ -17,6 +19,7 @@ export const Display = ({
     color = "red",
     backgroundColor,
     skew = false,
+    charMap = defaultCharMap,
 }: DisplayType) => {
     const [digits, setDigits] = useState([]);
 
@@ -70,6 +73,7 @@ export const Display = ({
                                   height={height}
                                   color={color}
                                   skew={skew}
+                                  charMap={charMap}
                               />
                           );
                       })

@@ -1,8 +1,6 @@
-export interface ICharToDigit {
-    [key: string]: [number,number,number,number,number,number,number]
-}
+export type CharToDigit = Record<string, [number, number, number, number, number, number, number]>;
 
-const   charToDigit: ICharToDigit = {
+const defaultCharMap: CharToDigit = {
     "0": [1, 1, 1, 1, 1, 1, 0],
     "1": [0, 1, 1, 0, 0, 0, 0],
     "2": [1, 1, 0, 1, 1, 0, 1],
@@ -21,6 +19,6 @@ const   charToDigit: ICharToDigit = {
     e: [1, 0, 0, 1, 1, 1, 1],
     f: [1, 0, 0, 0, 1, 1, 1],
     "-": [0, 0, 0, 0, 0, 0, 1],
-} as ICharToDigit;
+} as CharToDigit;
 
-export default charToDigit;
+export default defaultCharMap;

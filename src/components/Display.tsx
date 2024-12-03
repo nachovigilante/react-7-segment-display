@@ -1,6 +1,6 @@
 import { Digit } from "./Digit";
 import React, { useEffect, useState } from "react";
-import charToDigit, { ICharToDigit } from "../utils/charToDigit";
+import charToDigit, { CharToDigit } from "../utils/charToDigit";
 
 type DisplayType = {
     count: number;
@@ -9,7 +9,7 @@ type DisplayType = {
     color: string;
     backgroundColor?: string;
     skew: boolean;
-    charMap?: ICharToDigit;
+    charMap?: CharToDigit;
 };
 
 export const Display = ({

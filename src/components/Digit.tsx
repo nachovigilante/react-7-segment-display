@@ -1,7 +1,7 @@
 import Segment from "./Segment";
 import React, { useEffect, useState } from "react";
 
-import charToDigit, { ICharToDigit } from "../utils/charToDigit";
+import charToDigit, { CharToDigit } from "../utils/charToDigit";
 
 const letters = ["A", "B", "C", "D", "E", "F", "G"] as const;
 
@@ -12,7 +12,7 @@ type DigitType = {
     color: string;
     height: number;
     skew: boolean;
-    charMap?: ICharToDigit;
+    charMap?: CharToDigit;
 };
 
 

@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 
 import { Digit } from "../components/Digit";
-import CharToDigit from "../utils/charToDigit";
+import defaultCharMap from "../utils/charToDigit";
 
 const meta = {
     title: "Example/Digit",
@@ -9,28 +9,7 @@ const meta = {
     argTypes: {
         color: { control: "color" },
         height: { control: "number" },
-        char: {
-            control: "select",
-            options: [
-                "0",
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "6",
-                "7",
-                "8",
-                "9",
-                "a",
-                "b",
-                "c",
-                "d",
-                "e",
-                "f",
-                "-",
-            ],
-        },
+        char: { control: "text" },
     },
 } satisfies Meta<typeof Digit>;
 
@@ -52,7 +31,7 @@ export const WithCharMap: Story = {
         height: 250,
         char: "_",
         skew: false,
-        charMap: {"_": [0,0,0,1,0,0,0], ...CharToDigit}
+        charMap: { _: [0, 0, 0, 1, 0, 0, 0], ...defaultCharMap },
     },
 };
 
@@ -61,6 +40,6 @@ export const IllegalChar: Story = {
         color: "red",
         height: 250,
         char: "^",
-        skew: false
+        skew: false,
     },
 };

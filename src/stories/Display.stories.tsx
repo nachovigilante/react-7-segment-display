@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 
 import { Display } from "../components/Display";
-import CharToDigit from "../utils/charToDigit";
+import defaultCharMap from "../utils/charToDigit";
 
 const meta = {
     title: "Example/Display",
@@ -46,6 +46,6 @@ export const WithCharMap: Story = {
         charMap: {
             "_": [0,0,0,1,0,0,0],
             " ": [0,0,0,0,0,0,0],
-            ...CharToDigit}
+            ...defaultCharMap}
     },
 };

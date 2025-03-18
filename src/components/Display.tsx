@@ -9,6 +9,7 @@ type DisplayType = {
     color: string;
     backgroundColor?: string;
     skew: boolean;
+    padding: string;
     charMap?: CharToDigit;
 };
 
@@ -19,6 +20,7 @@ export const Display = ({
     color = "red",
     backgroundColor,
     skew = false,
+    padding = "20px",
     charMap = defaultCharMap,
 }: DisplayType) => {
     const [digits, setDigits] = useState([]);
@@ -30,7 +32,7 @@ export const Display = ({
         alignItems: "center",
         height: "fit-content",
         width: "fit-content",
-        padding: "20px",
+        padding,
     } as React.CSSProperties;
 
     const displayStyle = {
@@ -41,7 +43,7 @@ export const Display = ({
         height: "fit-content",
         width: "fit-content",
         backgroundColor: backgroundColor ? backgroundColor : "transparent",
-        padding: "20px",
+        padding,
         color: "white",
     } as React.CSSProperties;
 

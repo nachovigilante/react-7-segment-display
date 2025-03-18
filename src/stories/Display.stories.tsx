@@ -32,6 +32,7 @@ export const Default: Story = {
         count: 2,
         backgroundColor: "black",
         skew: false,
+        padding: "20px"
     },
 };
 
@@ -43,6 +44,7 @@ export const WithCharMap: Story = {
         count: 4,
         backgroundColor: "black",
         skew: false,
+        padding: "20px",
         charMap: {
             "_": [0,0,0,1,0,0,0],
             " ": [0,0,0,0,0,0,0],

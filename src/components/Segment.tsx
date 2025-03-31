@@ -13,7 +13,7 @@ const Segment = ({ active, color, size, id, skew }: SegmentType) => {
     const ss = skew ? skewedSegmentStyle[id] : segmentStyle[id];
 
     if (!ss) {
-        console.error(`Segment style for id "${id}" not found.`);
+        console.error(`react-7-segment-display: Segment style for id "${id}" not found.`);
         return null;
     }
 

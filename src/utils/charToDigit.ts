@@ -1,4 +1,7 @@
-export type CharToDigit = Record<string, [number, number, number, number, number, number, number]>;
+export type CharToDigit = Record<
+    string,
+    [number, number, number, number, number, number, number]
+>;
 
 const defaultCharMap: CharToDigit = {
     "0": [1, 1, 1, 1, 1, 1, 0],

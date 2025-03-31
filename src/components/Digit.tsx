@@ -7,7 +7,7 @@ const DEFAULT_CHAR = "-"; // Character to use if the provided char is invalid
 
 // Helper function to check if a value is a valid segment array [0, 1, ...]
 const isValidSegmentArray = (arr: any): arr is number[] => {
-    return Array.isArray(arr) && arr.every(item => typeof item === 'number');
+    return Array.isArray(arr) && arr.every((item) => typeof item === "number");
 };
 
 type DigitType = {
@@ -41,9 +41,10 @@ export const Digit = ({
 
     // 2. Try to get segments for the actual character prop `char`
     //    Ensure `char` is a string and exists as a key in the map.
-    const charSegments = typeof char === 'string' && char in currentMap
-        ? currentMap[char]
-        : undefined; // Explicitly undefined if lookup fails
+    const charSegments =
+        typeof char === "string" && char in currentMap
+            ? currentMap[char]
+            : undefined; // Explicitly undefined if lookup fails
 
     // 3. Validate the result or use the default fallback character's segments
     if (isValidSegmentArray(charSegments)) {
@@ -61,7 +62,9 @@ export const Digit = ({
             // }
         } else {
             // Ultimate Fallback: If even DEFAULT_CHAR segments are invalid (problem with map!)
-            console.error(`react-7-segment-display: Invalid segment data for char "${char}" AND default char "${DEFAULT_CHAR}". Check charMap.`);
+            console.error(
+                `react-7-segment-display: Invalid segment data for char "${char}" AND default char "${DEFAULT_CHAR}". Check charMap.`,
+            );
             segmentsToRender = []; // Assign empty array to prevent .map error
         }
     }
@@ -72,11 +75,13 @@ export const Digit = ({
     return (
         <div className="digit" style={style}>
             {segmentsToRender.map((active, index) => {
-                 // Safety check: Ensure index is valid for the 'letters' array
-                 if (index >= letters.length) {
-                     console.warn(`react-7-segment-display: Segment index ${index} out of bounds for letter mapping.`);
-                     return null; // Don't render segment if index is bad
-                 }
+                // Safety check: Ensure index is valid for the 'letters' array
+                if (index >= letters.length) {
+                    console.warn(
+                        `react-7-segment-display: Segment index ${index} out of bounds for letter mapping.`,
+                    );
+                    return null; // Don't render segment if index is bad
+                }
                 const letter = letters[index];
                 return (
                     <Segment

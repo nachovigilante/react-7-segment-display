@@ -12,6 +12,11 @@ type SegmentType = {
 const Segment = ({ active, color, size, id, skew }: SegmentType) => {
     const ss = skew ? skewedSegmentStyle[id] : segmentStyle[id];
 
+    if (!ss) {
+        console.error(`Segment style for id "${id}" not found.`);
+        return null;
+    }
+
     const outerStyle = {
         filter: active
             ? `drop-shadow(0px 0px ${size * 0.3}px ${color})`
